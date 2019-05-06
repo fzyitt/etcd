@@ -57,6 +57,8 @@ func init() {
 func watchLatencyFunc(cmd *cobra.Command, args []string) {
 	key := string(mustRandBytes(watchLKeySize))
 	value := string(mustRandBytes(watchLValueSize))
+	fmt.Printf("%s\n", key)
+	fmt.Printf("%s\n", value)
 
 	clients := mustCreateClients(totalClients, totalConns)
 	putClient := mustCreateConn()
